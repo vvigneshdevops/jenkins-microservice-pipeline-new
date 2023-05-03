@@ -14,7 +14,6 @@ pipeline{
 
 
 					echo "BuildNumber jenkins-${JOB_NAME}-${BUILD_NUMBER}"
-					echo "${BRANCH_NAME}"
 					echo "$env.JENKINS_HOME"
 					echo "$env.JENKINS_URL"
 				}
