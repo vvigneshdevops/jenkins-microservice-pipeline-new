@@ -30,4 +30,21 @@ pipeline{
 				
 			} 
 		}
+
+		post
+			{
+				always{
+					echo "I am successfully exec"
+				}
+
+				success{
+					echo "I am exec success"
+				}
+
+				failure{
+					echo "I have failed in exec"
+				}
+
+
+			}
 }
