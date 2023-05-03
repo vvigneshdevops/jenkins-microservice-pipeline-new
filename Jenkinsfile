@@ -18,9 +18,11 @@ pipeline{
 				steps 
 				{
 					// sh 'mv --version'
+
+					sh 'maven --version'
+					sh 'docker version'
 					echo "Build"
-
-
+				
 					echo "BuildNumber jenkins-${JOB_NAME}-${BUILD_NUMBER}"
 					echo "$env.JENKINS_HOME"
 					echo "$env.JENKINS_URL"
