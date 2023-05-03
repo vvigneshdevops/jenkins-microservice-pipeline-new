@@ -1,6 +1,6 @@
 pipeline{
 
-	agent {docker { image 'maven:3.6.3'}}
+	// agent { docker { image 'maven:3.6.3'}}
 
 	stages
 		{
@@ -8,8 +8,14 @@ pipeline{
 			{
 				steps 
 				{
-					sh 'mv --version'
+					// sh 'mv --version'
 					echo "Build"
+
+
+					echo "BuildNumber jenkins-${JOB_NAME}-${BUILD_NUMBER}"
+					echo "${BRANCH_NAME}"
+					echo "$env.JENKINS_HOME"
+					echo "$env.JENKINS_URL"
 				}
 				
 			} 
